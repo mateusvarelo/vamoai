@@ -1,0 +1,5 @@
+nome=input("Nome: ")
+numero_filhos=int(input("Quantos filhos pretende ter?"))
+cidade_futura=input("Qual cidade pretende morar?")
+profissao_sonho=input("Profissão do sonhos?")
+print(f"A vindente prevê: {nome} terá {numero_filhos} filhos e irá morar  em {cidade_futura} e irá atuar como {profissao_sonho}. ")
