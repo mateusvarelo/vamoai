@@ -1,34 +1,17 @@
-def podio_olimpico(tempo_chegada1,tempo_chegada2,tempo_chegada3):
-        string = ""
-        if ( tempo_chegada3 > tempo_chegada2 > tempo_chegada1):
-            string = "1 - "+str(tempo_chegada1)+" minutos\n"+"2 - " +str(tempo_chegada2)+" minutos\n" + "3 - "+str(tempo_chegada3)+" minutos\n"
-            return string
-
-        elif ( tempo_chegada2 > tempo_chegada3 > tempo_chegada1 ):   
-            string = "\n1 - " + str(tempo_chegada1)+" minutos" + " \n2 - " + str(tempo_chegada3)+" minutos" + "\n3 - " + str(tempo_chegada2)+" minutos"
-            return string
-        
-        elif (tempo_chegada1 < tempo_chegada2 > tempo_chegada3): 
-            string = "\n1 - " + str(tempo_chegada3)+" minutos" + " \n2 - " + str(tempo_chegada1)+" minutos" + "\n3 - " + str(tempo_chegada2)+" minutos"
-            return string
-        
-        elif (tempo_chegada3 > tempo_chegada1 > tempo_chegada2):
-            string = "\n1 - " + str(tempo_chegada2)+" minutos"+ " \n2 - " + str(tempo_chegada1) +" minutos" + "\n3 - " + str(tempo_chegada3)+" minutos"
-            return string
-        elif (tempo_chegada1  > tempo_chegada3 > tempo_chegada2):
-            string = "\n1 - " + str(tempo_chegada2)+" minutos" + " \n2 - " + str(tempo_chegada3)+" minutos" + "\n3 - " + str(tempo_chegada1) +" minutos"
-            return string 
-        
-        elif (tempo_chegada1 < tempo_chegada2 > tempo_chegada3):
-            string = "\n1 - " + str(tempo_chegada3)+" minutos" + " \n2 - " + str(tempo_chegada1)+" minutos" + "\n3 - " + str(tempo_chegada2)+" minutos"
-            return string    
-        elif (tempo_chegada1 > tempo_chegada2 > tempo_chegada3):
-            string = "\n1 - " + str(tempo_chegada3)+" minutos" + " \n2 - " + str(tempo_chegada2)+" minutos" + "\n3 - " + str(tempo_chegada1) +" minutos"
-            return string
-        string = "\n1 - " + str(tempo_chegada1)+" minutos" + " \n2 - " + str(tempo_chegada2)+" minutos" + "\n3 - " + str(tempo_chegada3) +" minutos" 
-        return  string 
-
-tempo_chegada1 = 1
-tempo_chegada2 = 2
-tempo_chegada3 = 3
-print (podio_olimpico(tempo_chegada1,tempo_chegada2,tempo_chegada3))
+def procura_chave_na_lista(dicionario):
+    if len(dicionario) == 0:
+      return dicionario
+    else:
+      for i in dicionario.keys():
+        print(i)
+        for j in dicionario.values():
+           print(j)
+           if i in j:
+              print("ok")
+              dicionario[i] = True
+              break
+           else:
+              dicionario[i] = False
+      return dicionario        
+dicionario = {"d": ["a", "b", "c"], "b": [1, 2, 3, "b"]}              
+print(procura_chave_na_lista(dicionario))              
