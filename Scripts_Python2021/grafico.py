@@ -1,12 +1,12 @@
-import matplotlib.pyplot as plt
-import numpy as np 
 
-lista = np.array([20,30,30,15])
+import matplotlib.pyplot  as plt
 
-minhalista = ["Maças","Bananas","Laranjas","Melancias"]
+meses = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho']
+valores = [105235, 107697, 110256, 109236, 108859, 109986]
 
-myexplode = [0.2,0,0,0]
-
-plt.pie(lista,labels = minhalista, explode = myexplode, shadow = True)
-
-plt.show()
+plt.plot(meses,valores)
+plt.ylim(100000, 120000)
+plt.title('Faturamento no primeiro semestre de 2017')
+plt.xlabel('Meses')
+plt.ylabel('Faturamento em R$')
+plt.savefig("mygraph.png")
