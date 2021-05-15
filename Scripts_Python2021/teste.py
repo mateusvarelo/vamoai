@@ -12,4 +12,4 @@ class Dicionario():
 d = Dicionario()  
 d.nova_entrada('Maçã', 'Uma fruta que cresce em árvores')
 print(d.checar('Maçã'))
-#hello
+#helloworld
