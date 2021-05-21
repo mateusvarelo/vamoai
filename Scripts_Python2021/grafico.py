@@ -10,4 +10,3 @@ plt.title('Faturamento no primeiro semestre de 2017')
 plt.xlabel('Meses')
 plt.ylabel('Faturamento em R$')
 plt.savefig("mygraph.png")
-##
