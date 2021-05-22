@@ -1,7 +1,7 @@
 import psycopg2
 
 # Connect to your postgres DB
-conn = psycopg2.connect("dbname=grupo2 user=grupo2")
+conn = psycopg2.connect("dbname=postgres user=meubanco")
 
 # Open a cursor to perform database operations
 cur = conn.cursor()
