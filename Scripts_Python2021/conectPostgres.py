@@ -13,9 +13,10 @@ conn = psycopg2.connect(
 cur = conn.cursor()
 
 # Execute a query
-cur.execute("SELECT * FROM Steam order by 2 limit 2")
+cur.execute("SELECT * FROM Steam  limit 1")
 
 # Retrieve query results
 records = cur.fetchall()
-print(records)
+for i in records:
+    print(reco)
 
