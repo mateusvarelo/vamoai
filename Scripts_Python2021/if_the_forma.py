@@ -1,4 +1,4 @@
-a = 2
+a = 1
 b = 3
-c = 5 if a < 1 else 8 #ternario
+c =  True if a < b else False #ternario
 print(c)
