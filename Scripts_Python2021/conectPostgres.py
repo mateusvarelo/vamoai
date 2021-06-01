@@ -14,7 +14,7 @@ cur = conn.cursor()
 
 # Execute a query
 #cur.execute("SELECT * FROM Steam  limit 1")
-cur.execute("SELECT gamename FROM Popularity  limit 3")
+cur.execute("SELECT *FROM Popularity limit 3")
 # Retrieve query results
 records = cur.fetchall()
 for i in records:
