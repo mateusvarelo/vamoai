@@ -1,4 +1,4 @@
-import sqlalchemy 
+import sqlalchemy
 from sqlalchemy import create_engine
 from sqlalchemy import Table, Column,Integer ,String,MetaData,Date
 from sqlalchemy import inspect
