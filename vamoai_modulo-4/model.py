@@ -6,14 +6,14 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import validates, Session
 
 
-engine = create_engine(
+conexao = create_engine(
     "postgresql://postgres:postgres@localhost/postgres",
     execution_options={
         "isolation_level": "REPEATABLE READ"
     }
 )
-metadata = MetaData()
-
+mdata = MetaData()
+Base = declarative_base(mdata = mdata)
 books = Table('tabela_1', metadata,
     Column('id', Integer, primary_key=True),
     Column('titulo', String),
