@@ -14,7 +14,8 @@ conexao = create_engine(
 )
 mdata = MetaData()
 Base = declarative_base(mdata = mdata)
-books = Table('tabela_1', metadata,
+
+books = Table('tabela_1', mdata,
     Column('id', Integer, primary_key=True),
     Column('titulo', String),
     Column('autoria', String),
