@@ -13,26 +13,40 @@ conexao = create_engine(
     }
 )
 mdata = MetaData()
-Base = declarative_base(mdata = mdata)
 
-books = Table('tabela_1', mdata,
+"""
+books = Table('livros', mdata,
     Column('id', Integer, primary_key=True),
     Column('titulo', String),
     Column('autoria', String),
     )
 
-data = Table(
-    "tabela_2",
-    metadata,
+data = Table("dados", mdata,
     Column('lancamentos', Date),
-    Column('ISBN', Integer, primary_key=True)
+    Column('ISBN', Integer),
+    Column('codigo', Integer, primary_key=True)
     )
+"""
 
-metadata.create_all(engine)
+mdata.create_all(conexao)
+
+Base = declarative_base(metadata=mdata)
 
 
+inspector = inspect(conexao)
+print(inspector.get_columns('livros'))
+print(inspector.get_columns('dados'))
 
-inspector = inspect(engine)
-print(inspector.get_columns('tabela_2'))
-print(inspector.get_columns('tabela_1'))
+#class
+class Livros(Base):
+   __tablename__ = 'livros'
+   id = Column('id', Integer, primary_key=True)
+   _titulo = Column('titulo', String)
+   autoria = Column('autoria', String)
 
+class Dados(Base):
+    __tablename__ = 'dados'
+    lancamentos = Column('lancamentos', Date)
+    isbn = Column('ISBN', Integer)
+    codigo = Column('codigo', Integer, primary_key=True)
+    
