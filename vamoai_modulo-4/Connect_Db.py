@@ -6,6 +6,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import validates, Session
 
 
+
 conexao = create_engine(
     "postgresql://postgres:postgres@localhost/postgres",
     execution_options={
