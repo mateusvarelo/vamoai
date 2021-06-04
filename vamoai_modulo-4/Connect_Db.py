@@ -34,9 +34,9 @@ mdata.create_all(conexao)
 Base = declarative_base(metadata=mdata)
 
 
-inspector = inspect(conexao)
-print(inspector.get_columns('livros'))
-print(inspector.get_columns('dados'))
+# inspector = inspect(conexao)
+# print(inspector.get_columns('livros'))
+# print(inspector.get_columns('dados'))
 
 #class
 class Livros(Base):
