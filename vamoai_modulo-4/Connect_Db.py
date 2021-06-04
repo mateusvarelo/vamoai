@@ -50,3 +50,19 @@ class Dados(Base):
     isbn = Column('ISBN', Integer)
     codigo = Column('codigo', Integer, primary_key=True)
     
+@validates('isbn')
+def validate_ISBN(self, key, isbn):
+    print("entrou")
+    print(isbn)
+    if len(str(isbn)) != 13:
+        raise ValueError(
+                    "O ISBN precisa conter 13 dígitos")
+    else:
+        print("O ISBN está correto")   
+        
+with Session(conexao) as session:
+    dados_do_livro = Dados()
+    dados_do_livro.isbn = 12345678901239
+    session.add(dados_do_livro)
+    session.commit()        
+    
