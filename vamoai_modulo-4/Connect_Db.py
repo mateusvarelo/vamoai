@@ -67,6 +67,3 @@ with Session(conexao) as session:
     session.add(dados_do_livro)
     session.commit()   
     
-with Session(conexao) as s
-             
-    
