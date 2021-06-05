@@ -65,5 +65,8 @@ with Session(conexao) as session:
     dados_do_livro = Dados()
     dados_do_livro.isbn = 12345678901239
     session.add(dados_do_livro)
-    session.commit()        
+    session.commit()   
+    
+with Session(conexao) as s
+             
     
